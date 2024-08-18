@@ -35,7 +35,7 @@ services:
     profiles: ["auto"]
     mem_limit: 16g
     build: ./services/AUTOMATIC1111
-    image: sd-auto:72
+    image: sd-auto:78
     environment:
       - CLI_ARGS=--allow-code --medvram --xformers --enable-insecure-extension-access --api --listen
 
@@ -89,7 +89,7 @@ services:
     <<: *base_service
     profiles: ["comfy"]
     build: ./services/comfy/
-    image: sd-comfy:6
+    image: sd-comfy:7
     environment:
       - CLI_ARGS=
 
