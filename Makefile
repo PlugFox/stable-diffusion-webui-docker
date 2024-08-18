@@ -5,6 +5,8 @@
 # docker compose --profile download up --build
 build:
 	@docker compose --profile download up --build
+	@docker compose --profile comfy up --build
+	@docker compose --profile auto up --build
 
 # Start the docker container
 #
@@ -19,7 +21,8 @@ build:
 # docker compose --profile auto up -d
 # Web UI: http://localhost:7860/
 start:
-	@docker compose --profile auto up -d
+	@docker compose --profile comfy up -d
+#   @docker compose --profile auto up -d
 #	@docker compose --profile ngrok up -d
 
 # Stop the docker container
